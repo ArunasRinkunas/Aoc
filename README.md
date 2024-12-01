@@ -1,0 +1,1 @@
+This is project for Advent of code - https://adventofcode.com/
