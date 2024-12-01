@@ -39,32 +39,9 @@ func main() {
 		}
 		if count > 0 {
 			sum = append(sum, leftNumber*count)
-			// fmt.Println(sum)
-			// os.Exit(1)
 		}
-
-		// indexMinNumberInRightGroup := slices.Index(rightGroup, minNumberInRightGroup)
-		// fmt.Println(indexMinNumberInLeftGroup);
-
 	}
-	// fmt.Println(sum)
-	// os.Exit(1)
-	// for len(leftGroup) > 0 && len(rightGroup) > 0 {
-	// 	minNumberInLeftGroup := slices.Min(leftGroup)
-	// 	indexMinNumberInLeftGroup := slices.Index(leftGroup, minNumberInLeftGroup)
 
-	// 	minNumberInRightGroup := slices.Min(rightGroup)
-	// 	indexMinNumberInRightGroup := slices.Index(rightGroup, minNumberInRightGroup)
-
-	// 	difference := minNumberInLeftGroup - minNumberInRightGroup
-	// 	if difference < 0 {
-	// 		difference = -difference
-	// 	}
-
-	// 	sum = append(sum, difference)
-	// 	leftGroup = append(leftGroup[:indexMinNumberInLeftGroup], leftGroup[indexMinNumberInLeftGroup+1:]...)
-	// 	rightGroup = append(rightGroup[:indexMinNumberInRightGroup], rightGroup[indexMinNumberInRightGroup+1:]...)
-	// }
 	sumOfArray(sum)
 }
 
