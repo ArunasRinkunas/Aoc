@@ -54,7 +54,7 @@ func sumOfArray(sum []int) {
 	result := 0
 
 	for i := 0; i < len(sum); i++ {
-        result += sum[i]
-    }
-   	println(result);
+		result += sum[i]
+	}
+	println(result)
 }
