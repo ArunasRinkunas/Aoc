@@ -23,8 +23,7 @@ function isLineNumbersIncreasing(array $numbers): bool
         if (
             array_key_exists($i+1, $numbers)
             && $numbers[$i] >= $numbers[$i+1]
-            
-            ) {
+        ) {
             return false;
         }
     }
@@ -38,8 +37,7 @@ function isLineNumbersDecreasing(array $numbers): bool
         if (
             array_key_exists($i+1, $numbers)
             && $numbers[$i] <= $numbers[$i+1]
-            
-            ) {
+        ) {
             return false;
         }
     }
@@ -52,14 +50,18 @@ function checkIfNumberPairsDoNotExceed3(array $numbers): int
     for ($i = 0; $i <= count($numbers); $i++) {
         if (
             array_key_exists($i+1, $numbers) 
-            && (
-                abs($numbers[$i] - $numbers[$i+1]) > 3
-            )
-        )
-        {
+            && abs($numbers[$i] - $numbers[$i+1]) > 3
+        ) {
             return 0;
         }
     }
 
     return 1;
+}
+
+function arrayWithoutIndex(array $input, int $index): array
+{
+    unset($input[$index]);
+
+    return array_values($input);
 }
