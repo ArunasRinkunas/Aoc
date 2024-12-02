@@ -58,7 +58,6 @@ function checkIfNumberPairsDoNotExceed3(array $numbers): int
         )
         {
             return 0;
-            break;
         }
     }
 
