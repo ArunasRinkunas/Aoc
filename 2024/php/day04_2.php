@@ -57,27 +57,31 @@ class searchWord
 
     private function checkCorners($input, $row, $column): bool
     {
-        $firstCrossTrue = false;
-        $secondCrossTrue = false;
+        $firstCrossValid = false;
+        $secondCrossValid = false;
 
         $topLeftCorner = $input[$row-1][$column-1];
         $topRightCorner = $input[$row-1][$column+1];
         $bottomLeftCorner = $input[$row+1][$column-1];
         $bottomRightCorner = $input[$row+1][$column+1];
+        
+        $crossOne = [$topLeftCorner, $bottomRightCorner];
+        $crossTwo = [[$topRightCorner, $bottomLeftCorner]];
+
         if (
-            in_array('M',[$topLeftCorner, $bottomRightCorner])
-            && in_array('S',[$topLeftCorner, $bottomRightCorner])
+            in_array('M', $crossOne)
+            && in_array('S', $crossOne)
         ) {
-            $firstCrossTrue = true;
+            $firstCrossValid = true;
         }
 
         if (
-            in_array('M',[$topRightCorner, $bottomLeftCorner])
-            && in_array('S',[$topRightCorner, $bottomLeftCorner])
+            in_array('M', $crossTwo)
+            && in_array('S', $crossTwo)
         ) {
-            $secondCrossTrue = true;
+            $secondCrossValid = true;
         }
 
-        return $firstCrossTrue && $secondCrossTrue;
+        return $firstCrossValid && $secondCrossValid;
     }
 }
