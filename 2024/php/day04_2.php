@@ -66,7 +66,7 @@ class searchWord
         $bottomRightCorner = $input[$row+1][$column+1];
         
         $crossOne = [$topLeftCorner, $bottomRightCorner];
-        $crossTwo = [[$topRightCorner, $bottomLeftCorner]];
+        $crossTwo = [$topRightCorner, $bottomLeftCorner];
 
         if (
             in_array('M', $crossOne)
