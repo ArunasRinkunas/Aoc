@@ -14,25 +14,27 @@ if ($file) {
         if ('L' === $turningTo) {
             for($i = $currentLockNumberIndex; $number >= 0; $i--) {
                 $number = $number - 1;
-                $currentLockNumberIndex = $i;
-                if ($i === 0) {
-                    $i = 100;
+                // if it goes below 0 then we do 99
+                if ($i === -1) {
+                    $i = 99;
                 }
+                $currentLockNumberIndex = $i;
             }
-            PHP_EOL;
-            if ($currentLockNumberIndex === 100 || $currentLockNumberIndex === 0) {
+
+            if ($currentLockNumberIndex === 0) {
                 $currentLockNumberIndex = 0;
                 $sumPointedAtZero++;
             }
         } elseif ('R' === $turningTo) {
             for($i = $currentLockNumberIndex; $number >= 0; $i++) {
                 $number = $number - 1;
-                $currentLockNumberIndex = $i;
+                //if it goes over 99 then we do 0
                 if ($i === 100) {
                     $i = 0;
                 }
+                $currentLockNumberIndex = $i;
             }
-            if ($currentLockNumberIndex === 100 || $currentLockNumberIndex === 0) {
+            if ($currentLockNumberIndex === 0) {
                 $currentLockNumberIndex = 0;
                 $sumPointedAtZero++;
             }
