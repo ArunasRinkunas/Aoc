@@ -1,6 +1,5 @@
 <?php
 
-$numbers = file_get_contents('inputs/day01.txt');
 $file = fopen("inputs/day01.txt", "r");
 
 if ($file) {
