@@ -6,7 +6,6 @@ if ($file) {
     $sum = 0;
 
     foreach ($file as $lIndex => $line) {
-        $newString = '';
         $lline = str_split(rtrim($line));
 
         foreach ($lline as $sIndex => $symbol) {
